@@ -18,7 +18,9 @@ export const round = (value: number, accuracy: number = 2): number => {
 const transformRegexp: RegExp =
   /(matrix\(-?\d+(\.\d+)?, -?\d+(\.\d+)?, -?\d+(\.\d+)?, -?\d+(\.\d+)?, )(-?\d+(\.\d+)?), (-?\d+(\.\d+)?)\)/;
 
-export const getTransformFromCss = (transformCssString: string): {x: number, y: number} => {
+export type TCoord = {x: number, y: number};
+
+export const getTransformFromCss = (transformCssString: string): TCoord => {
   const data: string[] | null = transformCssString.match(transformRegexp);
   if (!data) return { x: 0, y: 0 };
   return {
