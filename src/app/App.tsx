@@ -1,11 +1,28 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+//import { Logo } from 'src/components/Logo/Logo';
+//import { Header } from 'src/components/Header/Header';
+//import { Layout } from 'src/components/Layout/Layout';
+//import { ModalWindow } from 'src/components/ModalWindow/ModalWindow';
+//import { CartButton } from 'src/components/CartButton/CartButton';
+//import { Product } from 'src/components/Product/Product';
+//import { ProductDescShort } from 'src/components/ProductDescShort/ProductDescShort';
+//import { ProductDescFull } from 'src/components/ProductDescFull/ProductDescFull';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        {/* <Logo/> */}
+        {/* <Header /> */}
+        {/* <Layout /> */}
+        {/* <ModalWindow visible='true' children='' /> */}
+        {/* <CartButton count={0} /> */}
+        {/* <Product /> */}
+        {/* <ProductDescShort /> */}
+        {/* <ProductDescFull  /> */}
+
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Меня зовут Николай, я ведущий инженер-программист в компании ООО &quot;Цифровые технологии 1520&quot; (<a>https://dt1520.ru</a>).
