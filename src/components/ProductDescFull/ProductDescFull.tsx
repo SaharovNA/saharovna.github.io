@@ -23,7 +23,7 @@ export const ProductDescFull: FC<ProductDescFullProps> = ({cost, pics, categoryN
       <p>Цена: {cost}</p>
       <div>
         {pics?.map((x: string, i: number) => (
-          <img src={x} alt={"Picture " + i.toString()} />
+          <img key ={i} src={x} alt={"Picture " + i.toString()} />
         ))}
       </div>
       <CartButton count={0} />
