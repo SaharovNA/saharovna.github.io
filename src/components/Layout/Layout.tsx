@@ -4,7 +4,7 @@ import { Header } from '../Header/Header';
 import styles from './Layout.module.css';
 
 
-export const Layout = () => (
+export const Layout: FC = () => (
   <div className=''>
     <Header />
   </div>

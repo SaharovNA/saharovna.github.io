@@ -19,7 +19,7 @@ type Story = StoryObj<typeof meta>;
 export const ExampleProductFull: Story = {
     args: {
         cost: 100, 
-        pics: ['',''],
+        pics: ['picture1.png','picture2.png'],
         categoryName: 'Категория 1', 
         productName: 'Продукт 1', 
         productDesc: 'Описание продукта 1'

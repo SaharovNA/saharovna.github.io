@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import styles from './Product.module.css';
 
 
-export const Product = ({}) => {
+export const Product: FC = ({}) => {
   return (
     <div className=''>
       <div>Продукт</div>
