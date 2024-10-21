@@ -1,8 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { ThemeProvider } from '../components/providers/ThemeProvider/ThemeProvider';
+import '../components/providers/ThemeProvider/themes.css';
 //import { Logo } from 'src/components/Logo/Logo';
-//import { Header } from 'src/components/Header/Header';
+import { Header } from '../components/Header/Header';
 //import { Layout } from 'src/components/Layout/Layout';
 //import { ModalWindow } from 'src/components/ModalWindow/ModalWindow';
 //import { CartButton } from 'src/components/CartButton/CartButton';
@@ -12,33 +14,37 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* <Logo/> */}
-        {/* <Header /> */}
-        {/* <Layout /> */}
-        {/* <ModalWindow visible='true' children='' /> */}
-        {/* <CartButton count={0} /> */}
-        {/* <Product /> */}
-        {/* <ProductDescShort /> */}
-        {/* <ProductDescFull  /> */}
+    <ThemeProvider>
+      {/* <ThemeProvider> */}
+          <div className="App">
+            <header className="App-header">
+            <Header />
+              {/* <Logo/> */}
+              {/* <Layout /> */}
+              {/* <ModalWindow visible='true' children='' /> */}
+              {/* <CartButton count={0} /> */}
+              {/* <Product /> */}
+              {/* <ProductDescShort /> */}
+              {/* <ProductDescFull  /> */}
 
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          РњРµРЅСЏ Р·РѕРІСѓС‚ РќРёРєРѕР»Р°Р№, СЏ РІРµРґСѓС‰РёР№ РёРЅР¶РµРЅРµСЂ-РїСЂРѕРіСЂР°РјРјРёСЃС‚ РІ РєРѕРјРїР°РЅРёРё РћРћРћ &quot;Р¦РёС„СЂРѕРІС‹Рµ С‚РµС…РЅРѕР»РѕРіРёРё 1520&quot; (<a>https://dt1520.ru</a>).
-          <br/>
-          РЇ Р±РѕР»РµРµ 20 Р»РµС‚ Р·Р°РЅРёРјР°СЋСЃСЊ СЂР°Р·СЂР°Р±РѕС‚РєРѕР№ Р°РІС‚РѕРјР°С‚РёР·РёСЂРѕРІР°РЅРЅС‹С… СЃРёСЃС‚РµРј РґР»СЏ РћРђРћ &quot;Р Р–Р”&quot;, РђРћ &quot;Р РѕСЃР¶РµР»РґРѕСЂРїСЂРѕРµРєС‚&quot; Рё РґСЂСѓРіРёС… РїСЂРѕРµРєС‚РЅС‹С… РёРЅСЃС‚РёС‚СѓС‚РѕРІ РЅР° Р¶.Рґ. С‚СЂР°РЅСЃРїРѕСЂС‚Рµ (Р Р–Р”, РјРµС‚СЂРѕ Рё РїСЂ.).
-          <br/>
-          РћСЃРЅРѕРІРЅС‹Рµ РјРѕРё РЅР°РїСЂР°РІР»РµРЅРёСЏ: РђРЎ Р¤РЎ (СЃРёСЃС‚РµРјР° С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёР№ РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ Рё РјР°С‚РµСЂРёР°Р»РѕРІ), РђРЎРЈ-РЁ-2 (Р°РІС‚РѕРјР°С‚РёР·РёСЂРѕРІР°РЅРЅР°СЏ СЃРёСЃС‚РµРјР° СѓРїСЂР°РІР»РµРЅРёСЏ С…РѕР·СЏР№СЃС‚РІРѕРј РЎР¦Р‘ РЅР° Р¶.Рґ. С‚СЂР°РЅСЃРїРѕСЂС‚Рµ).
-          <br/>
-          РџСЂРёРјРµРЅСЏРµРјС‹Рµ РІ СЂР°Р·СЂР°Р±РѕС‚РєРµ СЏР·С‹РєРё Рё С‚РµС…РЅРѕР»РѕРіРёРё: C#, VB.NET, Delphi, .NET Framework, .NET Core, JavaScript, ExtJS Framework, MSSQL, PostgreSQL, SVN.
-          <br/>
-          РњРЅРµ С…РѕС‚РµР»РѕСЃСЊ Р±С‹ РїРѕР·РЅР°РєРѕРјРёС‚СЊСЃСЏ СЃ СЃРѕРІСЂРµРјРµРЅРЅС‹РјРё РЅР°РїСЂР°РІР»РµРЅРёСЏРјРё Рё С‚РµС…РЅРѕР»РѕРіРёСЏРјРё СЂР°Р·СЂР°Р±РѕС‚РєРё, Р»СѓС‡С€Рµ СѓР·РЅР°С‚СЊ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ git, unit-С‚РµСЃС‚РёСЂРѕРІР°РЅРёРµ Рё С‚.Рґ.
-          <br/>
-          РњРѕР№ С‚РµР»РµРіСЂР°Рј: @sakharov_n_a
-        </p>
-      </header>
-    </div>
+              <img src={logo} className="App-logo" alt="logo" />
+              <p>
+                Меня зовут Николай, я ведущий инженер-программист в компании ООО &quot;Цифровые технологии 1520&quot; (<a>https://dt1520.ru</a>).
+                <br/>
+                Я более 20 лет занимаюсь разработкой автоматизированных систем для ОАО &quot;РЖД&quot;, АО &quot;Росжелдорпроект&quot; и других проектных институтов на ж.д. транспорте (РЖД, метро и пр.).
+                <br/>
+                Основные мои направления: АС ФС (система формирования спецификаций оборудования и материалов), АСУ-Ш-2 (автоматизированная система управления хозяйством СЦБ на ж.д. транспорте).
+                <br/>
+                Применяемые в разработке языки и технологии: C#, VB.NET, Delphi, .NET Framework, .NET Core, JavaScript, ExtJS Framework, MSSQL, PostgreSQL, SVN.
+                <br/>
+                Мне хотелось бы познакомиться с современными направлениями и технологиями разработки, лучше узнать использование git, unit-тестирование и т.д.
+                <br/>
+                Мой телеграм: @sakharov_n_a
+              </p>
+            </header>
+          </div>
+      {/* </ThemeProvider> */}
+    </ThemeProvider>
   );
 }
 
