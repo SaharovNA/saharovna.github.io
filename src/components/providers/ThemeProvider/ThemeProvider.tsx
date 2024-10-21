@@ -13,7 +13,9 @@ interface ThemeContextType {
 
 export const ThemeContext = createContext<ThemeContextType>({
   theme: "light",
-  toggleTheme: () => {},
+  toggleTheme: () => {
+    //Empty
+  },
 });
 
 type ThemeProviderProps = {

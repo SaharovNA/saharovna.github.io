@@ -11,7 +11,9 @@ interface LangContextType {
 
 export const LangContext = createContext<LangContextType>({
   language: "ru",
-  toggleLanguage: () => {},
+  toggleLanguage: () => {
+    //Empty
+  },
 });
 
 type LangProviderProps = {
