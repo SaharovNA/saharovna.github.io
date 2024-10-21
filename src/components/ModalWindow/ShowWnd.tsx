@@ -32,7 +32,9 @@ export const ShowWnd: FC<ShowWndProps> = ({content}) => {
             //className={cn('storybook-button', `storybook-button--${size}`, mode)}
             //style={{ backgroundColor: backgroundColor || 'green' }}
             onClick={openModal} >Открыть окно</button>
-        <ModalWindow visible={isOpen} children={inputContent} onClose={closeModal} />
+        <ModalWindow visible={isOpen} onClose={closeModal}>
+          {inputContent}
+        </ModalWindow>
       </div>
     </>
   );
