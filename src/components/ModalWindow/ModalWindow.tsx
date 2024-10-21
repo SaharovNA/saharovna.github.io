@@ -5,6 +5,7 @@ import styles from './ModalWindow.module.css';
 
 interface ModalWindowProps {
   visible: boolean;
+  onClose: () => void;
   children: React.ReactNode;
 }
 /*
@@ -17,19 +18,21 @@ const closeModal = () => {
   setIsOpen(false);
 }
 */
-export const ModalWindow: FC<ModalWindowProps> = ({visible , children}) => {
+export const ModalWindow: FC<ModalWindowProps> = ({visible, onClose, children}) => {
   return (
+    visible ?
     <>
       <div className={styles.modal__overlay}></div>
       <div className={styles.modal}>
         <header className={styles.modal__header}>
           <h2>Modal Title</h2>
-          <button className={styles.close__button}>&times;</button>
+          <button onClick={onClose} className={styles.close__button}>&times;</button>
         </header>
         <main className={styles.modal__main}>
           {children}
         </main>
       </div>
     </>
+    : null
   );
 };
