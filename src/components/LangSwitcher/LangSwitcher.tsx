@@ -38,10 +38,8 @@ const ViewLangSwitcherExapmple = () => {
 
 export const LangSwitcherExample = () => {
   return (
-    <>
-      <LangProvider>
-        <ViewLangSwitcherExapmple />
-      </LangProvider>
-    </>
+    <LangProvider>
+      <ViewLangSwitcherExapmple />
+    </LangProvider>
   );
 };
