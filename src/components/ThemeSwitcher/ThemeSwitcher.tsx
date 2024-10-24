@@ -40,11 +40,9 @@ const ViewThemeSwitcherExapmple = () => {
 
 export const ThemeSwitcherExample = () => {
   return (
-    <>
-      <ThemeProvider>
-        <ViewThemeSwitcherExapmple />
-      </ThemeProvider>
-    </>
+    <ThemeProvider>
+      <ViewThemeSwitcherExapmple />
+    </ThemeProvider>
   );
 };
 
