@@ -9,6 +9,7 @@ import '../components/providers/ThemeProvider/themes.css';
 //import { Logo } from 'src/components/Logo/Logo';
 import { Header } from '../components/Header/Header';
 import { ShowWnd } from '../components/ModalWindow/ShowWnd';
+import { ProductsMoreButton } from '../components/ProductsMoreButton/ProductsMoreButton';
 //import { Layout } from 'src/components/Layout/Layout';
 //import { ModalWindow } from 'src/components/ModalWindow/ModalWindow';
 //import { CartButton } from 'src/components/CartButton/CartButton';
@@ -31,6 +32,7 @@ function App() {
             <header className="App-header">
               <Header />
               <ShowWnd />
+              <ProductsMoreButton />
 
               {/* <Logo/> */}
               {/* <Layout /> */}
