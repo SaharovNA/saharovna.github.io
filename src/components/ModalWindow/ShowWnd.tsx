@@ -4,8 +4,8 @@ import { ModalWindow } from './ModalWindow';
 //import styles from './ShowWnd.module.css';
 
 interface ShowWndProps {
-  content: string;
-  children: React.ReactNode;
+  content?: string;
+  children?: React.ReactNode;
 }
 
 
