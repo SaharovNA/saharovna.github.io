@@ -75,6 +75,13 @@ module.exports = (_, args) => {
           type: 'asset/inline',
         },
         {
+          test: /\.(png|jpe?g|gif|webp)$/i, // изображение
+          type: 'asset/resource',
+          //generator: {
+          //    filename: 'img/[hash][ext][query]'
+          //}
+      },
+        {
           test: /\.s[ac]ss$/i,
           use: [
             {
