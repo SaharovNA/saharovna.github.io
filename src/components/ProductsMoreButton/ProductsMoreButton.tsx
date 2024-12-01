@@ -1,7 +1,5 @@
 import React, { FC, useState } from 'react';
-//import { Header } from 'src/components/Header/Header';
-//import { CartButton } from '../CartButton/CartButton';
-//import styles from './ProductsMoreButton.module.css';
+import styles from './ProductsMoreButton.module.css';
 import { Product, createRandomProduct } from '../../../src/homeworks/ts1/3_write';
 import { ProductList } from '../ProductList/ProductList';
 
