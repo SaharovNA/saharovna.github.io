@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-//import { Header } from 'src/components/Header/Header';
 import { CartButton } from '../CartButton/CartButton';
 import styles from './ProductDescFull.module.css';
 
