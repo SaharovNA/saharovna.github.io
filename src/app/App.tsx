@@ -3,26 +3,19 @@ import React from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import logo from './logo.svg';
 import './App.css';
-import { ThemeProvider } from '../components/providers/ThemeProvider/ThemeProvider';
-import { LangProvider } from '../components/providers/LangProvider/LangProvider';
-import '../components/providers/ThemeProvider/themes.css';
-//import { Logo } from 'src/components/Logo/Logo';
-import { Header } from '../components/Header/Header';
-import { ShowWnd } from '../components/ModalWindow/ShowWnd';
-import { ProductsMoreButton } from '../components/ProductsMoreButton/ProductsMoreButton';
-//import { Layout } from 'src/components/Layout/Layout';
-//import { ModalWindow } from 'src/components/ModalWindow/ModalWindow';
-//import { CartButton } from 'src/components/CartButton/CartButton';
-//import { Product } from 'src/components/Product/Product';
-//import { ProductDescShort } from 'src/components/ProductDescShort/ProductDescShort';
-//import { ProductDescFull } from 'src/components/ProductDescFull/ProductDescFull';
+import { ThemeProvider } from './providers/ThemeProvider/ThemeProvider';
+import { LangProvider } from './providers/LangProvider/LangProvider';
+import './providers/ThemeProvider/themes.css';
+import { Header } from '../features/Header/Header';
+import { ShowWnd } from '../features/ModalWindow/ShowWnd';
+
 
 function App() {
   const { t } = useTranslation();
 
   return (
     <ThemeProvider>
-      {/* <ThemeProvider> */}
+      {/* <ThemeProvider> - Почему-то в примерах провайдеры вложены друг в друга по 2 раза */}
         <LangProvider>
           {/* <LangProvider> */}
         {/* <I18nextProvider i18n={i18n}>
@@ -32,15 +25,6 @@ function App() {
             <header className="App-header">
               <Header />
               <ShowWnd />
-              <ProductsMoreButton />
-
-              {/* <Logo/> */}
-              {/* <Layout /> */}
-              {/* <ModalWindow visible='true' children='' /> */}
-              {/* <CartButton count={0} /> */}
-              {/* <Product /> */}
-              {/* <ProductDescShort /> */}
-              {/* <ProductDescFull  /> */}
 
               <img src={logo} className="App-logo" alt="logo" />
               <p>
