@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import styles from './ProductsMoreButton.module.css';
-import { Product, createRandomProduct } from '../../../src/homeworks/ts1/3_write';
+import { Product, createRandomProduct } from '../../../../homeworks/ts1/3_write';
 import { ProductList } from '../ProductList/ProductList';
 
 

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
  
 import { LangSwitcher, LangSwitcherExample } from './LangSwitcher';
-import '../providers/LangProvider/i18n';
+import '../../app/providers/LangProvider/i18n';
  
 const meta: Meta<typeof LangSwitcher> = {
   title: 'MyComponents/Switchers/LangSwitcher',

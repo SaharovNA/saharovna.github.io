@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { CartButton } from '../CartButton/CartButton';
+import { CartButton } from '../../../CartButton/CartButton';
 import styles from './ProductDescFull.module.css';
 
 interface ProductDescFullProps {
