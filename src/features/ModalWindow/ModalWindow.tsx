@@ -1,25 +1,25 @@
-import React, { FC } from 'react';
-//import { Header } from 'src/components/Header/Header';
-//import './ModalWindow.module.css';
-import styles from './ModalWindow.module.css';
+import React, { FC, useMemo } from 'react';
 import { createPortal } from 'react-dom';
+import styles from './ModalWindow.module.css';
 
 interface ModalWindowProps {
   visible: boolean;
-  onClose: () => void;
   children: React.ReactNode;
-}
-/*
-const [isOpen, setIsOpen] = useState(false);
-const openModal = () => {
-  setIsOpen(true);
+  onClose: () => void;
 }
 
-const closeModal = () => {
-  setIsOpen(false);
-}
-*/
-export const ModalWindow: FC<ModalWindowProps> = ({visible, onClose, children}) => {
+const MemoMain = React.memo<{children: React.ReactNode}>(({children}) => {
+  return (
+    <main className={styles.modal__main}>
+      {children}
+    </main>
+  );
+})
+
+export const ModalWindow: FC<ModalWindowProps> = ({visible, children, onClose}) => {
+
+  const memoChildren = useMemo(() => children, [children]);
+
   return (
     visible ?
       createPortal(
@@ -30,9 +30,9 @@ export const ModalWindow: FC<ModalWindowProps> = ({visible, onClose, children}) 
               <h2>Modal Title</h2>
               <button onClick={onClose} className={styles.close__button}>&times;</button>
             </header>
-            <main className={styles.modal__main}>
-              {children}
-            </main>
+            <MemoMain>
+              {memoChildren}
+            </MemoMain>
           </div>
         </>,
         document.querySelector('#modal-root')!
