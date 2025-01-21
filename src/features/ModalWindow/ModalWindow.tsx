@@ -8,13 +8,18 @@ interface ModalWindowProps {
   onClose: () => void;
 }
 
-const MemoMain = React.memo<{children: React.ReactNode}>(({children}) => {
+interface MainProps {
+  children: React.ReactNode;
+}
+const Main: FC<MainProps> = ({children}) => {
   return (
     <main className={styles.modal__main}>
       {children}
     </main>
   );
-})
+}
+
+const MemoMain = React.memo<MainProps>(Main)
 
 export const ModalWindow: FC<ModalWindowProps> = ({visible, children, onClose}) => {
 
